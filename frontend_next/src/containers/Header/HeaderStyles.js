@@ -66,6 +66,7 @@ export const Cv = styled.a`
 
   &:hover {
     transform: scale(0.96);
+    background: rgba(93, 97, 124, 0.2);
   }
   &:active {
     transform: scale(1.1);
