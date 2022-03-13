@@ -8,7 +8,7 @@ const NavigationDots = ({ active }) => {
                 hero
                 key={index + item}
                 href={`#${item}`}
-                style={active === item ? { backgroundColor: 'rgb(225, 173, 105)' } : {}}
+                style={active === item ? { backgroundColor: 'rgb(45, 46, 73)' } : {}}
             />
         ))}
     </AppNavigation>

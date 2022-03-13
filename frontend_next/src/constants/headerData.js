@@ -1,7 +1,8 @@
-import { IoLogoYoutube, IoMdMailUnread } from "react-icons/io";
+import { IoMdMailUnread } from "react-icons/io";
+import { BsGithub } from "react-icons/bs";
 import { ImHome3 } from "react-icons/im";
 import { RiGitBranchFill, RiInstagramFill } from "react-icons/ri";
-import { FaTelegramPlane, FaTwitter, FaUser } from "react-icons/fa";
+import { FaTelegramPlane, FaTools, FaLinkedinIn, FaUser } from "react-icons/fa";
 
 export const Links = [
   {
@@ -20,9 +21,14 @@ export const Links = [
     id: 3,
   },
   {
+    title: "Skills",
+    href: "#skills",
+    id: 4,
+  },
+  {
     title: "Contact",
     href: "#contact",
-    id: 4,
+    id: 5,
   },
 ];
 
@@ -46,32 +52,33 @@ export const mobileLinks = [
     id: 3,
   },
   {
+    title: "Skills",
+    href: "#skills",
+    icon: <FaTools size="0.8rem" />,
+    id: 4,
+  },
+  {
     title: "Contact",
     href: "#contact",
     icon: <IoMdMailUnread size="0.8rem" />,
-    id: 4,
+    id: 5,
   },
 ];
 
 export const socialIcons = [
   {
-    icon: <IoLogoYoutube size="1.1rem" />,
+    icon: <BsGithub size="1.5rem" />,
     link: "https://www.youtube.com/c/KryptOkib",
     id: 1,
   },
   {
-    icon: <FaTelegramPlane size="1.1rem" />,
-    link: "https://www.youtube.com/c/KryptOkib",
+    icon: <FaLinkedinIn size="1.5rem" />,
+    link: "https://twitter.com/KryptOkib",
     id: 2,
   },
   {
-    icon: <FaTwitter size="1.1rem" />,
-    link: "https://twitter.com/KryptOkib",
+    icon: <FaTelegramPlane size="1.5rem" />,
+    link: "https://www.youtube.com/c/KryptOkib",
     id: 3,
-  },
-  {
-    icon: <RiInstagramFill size="1.1rem" />,
-    link: "https://www.instagram.com/kryptokib/",
-    id: 4,
   },
 ];

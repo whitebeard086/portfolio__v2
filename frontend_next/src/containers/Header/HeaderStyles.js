@@ -16,6 +16,11 @@ export const Container = styled.header`
   z-index: 20;
   position: fixed;
 
+  &.active {
+    transition: all 1s ease;
+    background: rgba(45, 46, 73, 0.99);
+  }
+
   @media ${props => props.theme.breakpoints.xmd} {
     padding: 2rem 2rem;
   }

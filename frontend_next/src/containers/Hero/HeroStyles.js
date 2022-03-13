@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
-  height: 100vh;
+  height: 101vh;
   position: relative;
 `;
 
@@ -34,25 +35,13 @@ export const Video = styled.video`
   object-fit: cover;
 `;
 
-export const HeroContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  height: 100vh;
-  z-index: 20;
-  padding: 0 5rem;
-  margin: 0 5rem;
-
-  @media ${props => props.theme.breakpoints.xmd} {
-    padding: 0;
-    margin: 0 5rem;
-  }
+export const HeroContent = styled(motion.div)`
+  
 `;
 
 export const Text = styled.div`
-  /* background: #fff; */
+  margin-top: 8rem;
+  
   width: 70%;
 
   @media ${props => props.theme.breakpoints.xmd} {
@@ -72,18 +61,7 @@ export const MainText = styled.h1`
   }
 `;
 
-export const HeroText = styled.p`
-  font-size: 1.4rem;
-  font-weight: 200;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.6);
-
-  @media ${props => props.theme.breakpoints.xmd} {
-    font-size: 1.2rem;
-  }
-`;
-
-export const Button = styled.div`
+export const Button = styled(motion.div)`
   margin: 3rem 0;
   transition: all 0.3s ease;
 
