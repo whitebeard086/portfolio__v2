@@ -5,12 +5,19 @@ export const Contain = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 5rem;
-  margin: 0 5rem;
+  
 
   @media ${props => props.theme.breakpoints.xmd} {
     padding: 0;
     margin: 0 5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    margin: 0 2.5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.xsm} {
+    margin: 0 2rem;
   }
 `;
 
@@ -24,5 +31,9 @@ export const BodyText = styled.p`
   @media ${props => props.theme.breakpoints.xmd} {
     font-size: 1.2rem;
     width: 100%;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1rem;
   }
 `;

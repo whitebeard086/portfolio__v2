@@ -6,6 +6,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import {
   Categories,
   Container,
+  Contain,
   Header,
   ImageHover,
   LiveIcon,
@@ -23,7 +24,7 @@ import {
   SourceIcon,
   Tag,
 } from "./ProjectStyles";
-import { Contain } from "../../styles/GlobalComponents";
+// import { Contain } from "../../styles/GlobalComponents";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");

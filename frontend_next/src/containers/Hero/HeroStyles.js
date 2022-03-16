@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 export const Container = styled.section`
   height: 101vh;
   position: relative;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    height: 100vh;
+  }
 `;
 
 export const HeroBg = styled.div`
@@ -35,6 +39,10 @@ export const Video = styled.video`
   object-fit: cover;
 `;
 
+export const Contain = styled.div`
+
+`
+
 export const HeroContent = styled(motion.div)`
   
 `;
@@ -43,21 +51,39 @@ export const Text = styled.div`
   margin-top: 8rem;
   
   width: 70%;
+  max-width: 800px;
 
   @media ${props => props.theme.breakpoints.xmd} {
     width: 100%;
+  }
+  
+  @media ${props => props.theme.breakpoints.sm} {
+    padding-top: 3rem;
+  }
+
+  @media ${props => props.theme.breakpoints.xsm} {
+    padding-top: 6rem;
   }
 `;
 
 export const MainText = styled.h1`
   font-size: 4rem;
+  width: 80%;
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  @media ${props => props.theme.breakpoints.xmd} {
+  @media ${props => props.theme.breakpoints.lg} {
     font-size: 3rem;
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 2.5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 2.2rem;
   }
 `;
 

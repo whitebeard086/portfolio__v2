@@ -9,6 +9,21 @@ export const Container = styled.section`
   justify-content: center;
 `;
 
+export const Contain = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 0 5rem;
+  margin: 0 5rem;
+
+  @media ${props => props.theme.breakpoints.xmd} {
+    padding: 0;
+    margin: 0 5rem;
+  }
+`
+
 export const Header = styled.h2`
   margin-top: 4rem;
   font-size: 3rem;
@@ -42,6 +57,10 @@ export const Categories = styled.div`
     background: rgba(45, 46, 73, 0.9);
     color: rgba(255, 255, 255);
     font-weight: 500;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 0.4rem .4rem;
   }
 `;
 

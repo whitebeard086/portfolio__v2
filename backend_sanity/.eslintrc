@@ -1,3 +1,1 @@
-{
-  "extends": "@sanity/eslint-config-studio"
-}
+{ "extends": ["next/core-web-vitals", "prettier"] }

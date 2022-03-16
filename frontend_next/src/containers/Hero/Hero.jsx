@@ -40,7 +40,7 @@ const Hero = () => {
         <Text>
           <BodyText hero>Hey there,</BodyText>
           <MainText>
-            Welcome To <br /> My Personal Portfolio
+            Welcome To My Personal Portfolio
           </MainText>
           <BodyText hero>
             Glad to have you on my portfolio, I am excited about all the things we are going to

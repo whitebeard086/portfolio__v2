@@ -9,6 +9,10 @@ export const SocialIcons = styled.div`
   z-index: 1;
   margin: 0 5rem;
 
+  @media ${props => props.theme.breakpoints.lg} {
+    margin: 0 3rem;
+  }
+
   @media ${props => props.theme.breakpoints.xmd} {
       display: none;
   }

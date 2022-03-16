@@ -21,8 +21,12 @@ export const Container = styled.header`
     background: rgba(45, 46, 73, 0.99);
   }
 
-  @media ${props => props.theme.breakpoints.xmd} {
+  @media ${props => props.theme.breakpoints.lg} {
     padding: 2rem 2rem;
+  }
+  
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 2rem 1rem;
   }
 `;
 
@@ -40,15 +44,20 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled.a`
-  color: rgba(222, 223, 238);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
   transition: all 0.4s ease;
+
+  @media ${props => props.theme.breakpoints.lg} {
+    font-size: 1.05rem;
+  }
 
   &.active {
     color: rgb(225, 173, 105);
   }
 
   &:hover {
-    color: rgb(225, 173, 105);
+    color: rgba(255, 255, 255);
   }
 `;
 

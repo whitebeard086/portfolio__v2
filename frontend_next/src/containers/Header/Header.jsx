@@ -50,10 +50,10 @@ const Header = ({ className, toggleSidebar }) => {
             </NavLink>
           ))}
         </NavLinks>
+        <Cv href="../../assets/docs/resume.pdf" download>
+          Résumé
+        </Cv>
       </NavContainer>
-      <Cv href="../../assets/docs/resume.pdf" download>
-        Résumé
-      </Cv>
       <MobileMenu onClick={toggleSidebar} />
     </Container>
   );

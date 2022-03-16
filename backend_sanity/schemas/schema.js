@@ -9,7 +9,8 @@ import brands from "./brands";
 import categories from "./categories";
 import about from "./about";
 import experiences from "./experiences";
-import heroVideo from "./heroVideo";
+import imageAssets from "./imageAssets";
+import assets from "./assets";
 import skills from "./skills";
 import workExperience from "./workExperience";
 import contact from "./contact";
@@ -29,7 +30,8 @@ export default createSchema({
     skills,
     workExperience,
     experiences,
-    heroVideo,
+    imageAssets,
+    assets,
     contact,
     /* Your types here! */
   ]),
