@@ -25,6 +25,7 @@ export const BodyText = styled.p`
   font-size: 1.4rem;
   font-weight: ${({ hero }) => (hero ? "200" : "600")};
   line-height: 2;
+  margin-bottom: 2rem;
   width: ${({ about }) => (about ? "50%" : "")};
   color: ${({ light }) => (light ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.6)")};
 
@@ -34,6 +35,11 @@ export const BodyText = styled.p`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  @media ${props => props.theme.breakpoints.xsm} {
     font-size: 1rem;
   }
 `;

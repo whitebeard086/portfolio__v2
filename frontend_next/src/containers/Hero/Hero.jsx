@@ -7,15 +7,7 @@ import { userQuery } from "../../utils/data";
 import { AppWrap } from "../../wrapper/";
 
 import { BodyText, Contain } from "../../styles/GlobalComponents";
-import {
-  Container,
-  HeroBg,
-  Text,
-  MainText,
-  Video,
-  Button,
-  Link,
-} from "./HeroStyles";
+import { Container, HeroBg, Text, MainText, Video, Button, ButtonContainer } from "./HeroStyles";
 
 const Hero = () => {
   const [video, setVideo] = useState(null);
@@ -30,26 +22,26 @@ const Hero = () => {
   return (
     <Container id="home">
       <HeroBg>
-          <Video autoPlay loop muted playsInline>
+        <Video autoPlay loop muted playsInline>
           <source src="/data.mp4" type="video/mp4" />
         </Video>
       </HeroBg>
-      <Contain as={motion.div}
+      <Contain
+        as={motion.div}
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}>
         <Text>
           <BodyText hero>Hey there,</BodyText>
-          <MainText>
-            Welcome To My Personal Portfolio
-          </MainText>
+          <MainText>Welcome To My Personal Portfolio</MainText>
           <BodyText hero>
             Glad to have you on my portfolio, I am excited about all the things we are going to
             build together. Feel free to have a look around at some of the things I have been
             working on, and also get in touch so we can get started on your project right away!
           </BodyText>
-          <Button>
-            <Link>My Projects</Link>
-          </Button>
+          <ButtonContainer>
+            <Button href="#projects">My Projects</Button>
+            <Button transparent href="#about">Learn More</Button>
+          </ButtonContainer>
         </Text>
       </Contain>
     </Container>

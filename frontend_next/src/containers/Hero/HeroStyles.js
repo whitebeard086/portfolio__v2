@@ -2,13 +2,18 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled.section`
-  height: 101vh;
+  min-height: 101vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   position: relative;
 
   @media ${props => props.theme.breakpoints.sm} {
-    height: 100vh;
+    height: 100%;
   }
 `;
+
+export const Content = styled(motion.div)``;
 
 export const HeroBg = styled.div`
   position: absolute;
@@ -39,30 +44,21 @@ export const Video = styled.video`
   object-fit: cover;
 `;
 
-export const Contain = styled.div`
+export const Contain = styled.div``;
 
-`
-
-export const HeroContent = styled(motion.div)`
-  
-`;
+export const HeroContent = styled(motion.div)``;
 
 export const Text = styled.div`
-  margin-top: 8rem;
-  
-  width: 70%;
+  margin-top: 10rem;
+  height: 100vh;
   max-width: 800px;
 
   @media ${props => props.theme.breakpoints.xmd} {
     width: 100%;
   }
-  
-  @media ${props => props.theme.breakpoints.sm} {
-    padding-top: 3rem;
-  }
 
-  @media ${props => props.theme.breakpoints.xsm} {
-    padding-top: 6rem;
+  @media ${props => props.theme.breakpoints.sm} {
+    padding-top: 0.5rem;
   }
 `;
 
@@ -83,32 +79,33 @@ export const MainText = styled.h1`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  @media ${props => props.theme.breakpoints.xsm} {
+    font-size: 1.8rem;
   }
 `;
 
-export const Button = styled(motion.div)`
-  margin: 3rem 0;
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: scale(0.99);
-  }
-  &:active {
-    transform: scale(1.01);
-  }
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 2rem;
 `;
 
-export const Link = styled.a`
-  border: 2px solid rgb(225, 173, 105);
-  color: rgb(225, 173, 105);
-  font-weight: bold;
-  padding: 1rem 2rem;
+export const Button = styled.a`
+  padding: 1rem 1.5rem;
   border-radius: 4px;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  background-color: ${({ transparent }) => (transparent ? "none" : "#2d2e49")};
+  background-image: ${({ transparent }) => (transparent ? "none" : "linear-gradient(26deg, #2d2e49 0%, #5d617c 100%)")};
+  border: ${({ transparent }) => (transparent ? "2px solid rgb(225, 173, 105)" : "none")};
+  color: rgba(222, 223, 238);
+  transition: all 0.4s ease;
 
   &:hover {
-    background: rgba(93, 97, 124, 0.2);
+    transform: scale(0.9);
+  }
+
+  &:active {
+    transform: scale(1.1);
   }
 `;

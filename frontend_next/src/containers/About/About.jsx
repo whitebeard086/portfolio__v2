@@ -7,18 +7,15 @@ import {
   AboutText,
   Body,
   Button,
+  Link,
   Title,
 } from "./AboutStyles";
-import about from "../../assets/images/about.svg";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { client, urlFor } from "../../client";
 import { useEffect, useState } from "react";
 
-
-
 const About = () => {
-  const [about, setAbout] = useState(null)
+  const [about, setAbout] = useState(null);
 
   useEffect(() => {
     const query = '*[_type == "imageAssets"]';
@@ -27,24 +24,20 @@ const About = () => {
       setAbout(data[0]);
     });
   }, []);
-  
+
   return (
     <AboutContainer id="about">
       <Contain>
         <AboutContent>
-          <AboutImage>
-            {about && <img src={urlFor(about?.image)} alt={about?.title} />}
-          </AboutImage>
+          <AboutImage>{about && <img src={urlFor(about?.image)} alt={about?.title} />}</AboutImage>
           <AboutText>
             <Title>I'm available, I'm motivated</Title>
             <Body>
-              Along building on my knowledge base, I love working on new challenges
-              and ideas, working with new tools and technologies. These are the times 
-              I have the most fun as they often throw several lightbulb moments.
+              Alongside building on my knowledge base, I love working on new challenges and ideas,
+              working with new tools and technologies. These are the times I have the most fun as
+              they often lead to several lightbulb moments.
             </Body>
-            <Button>
-              Send me a Message
-            </Button>
+            <Button href="mailto:ejimalex@gmail.com">Send Me a Mail</Button>
           </AboutText>
         </AboutContent>
       </Contain>
