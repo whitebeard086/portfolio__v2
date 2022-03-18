@@ -101,6 +101,11 @@ export const Button = styled.a`
   color: rgba(222, 223, 238);
   transition: all 0.4s ease;
 
+  @media ${props => props.theme.breakpoints.xsm} {
+    padding: .8rem 1.2rem;
+    font-size: .8rem;
+  }
+
   &:hover {
     transform: scale(0.9);
   }
