@@ -67,17 +67,17 @@ export const mobileLinks = [
 
 export const socialIcons = [
   {
-    icon: <BsGithub size="1.5rem" />,
+    icon: <BsGithub size="1.4rem" />,
     link: "https://www.youtube.com/c/KryptOkib",
     id: 1,
   },
   {
-    icon: <FaLinkedinIn size="1.5rem" />,
+    icon: <FaLinkedinIn size="1.4rem" />,
     link: "https://twitter.com/KryptOkib",
     id: 2,
   },
   {
-    icon: <FaTelegramPlane size="1.5rem" />,
+    icon: <FaTelegramPlane size="1.4rem" />,
     link: "https://www.youtube.com/c/KryptOkib",
     id: 3,
   },
