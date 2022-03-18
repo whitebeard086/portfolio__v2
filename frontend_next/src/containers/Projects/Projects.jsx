@@ -23,8 +23,8 @@ import {
   ProjectTitle,
   SourceIcon,
   Tag,
+  Span,
 } from "./ProjectStyles";
-// import { Contain } from "../../styles/GlobalComponents";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -32,7 +32,20 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [filterProjects, setFilterProjects] = useState([]);
 
-  const handleProjectsFilter = category => {};
+  const handleProjectsFilter = category => {
+    setActiveFilter(category);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
+      if (category === "All") {
+        setFilterProjects(projects)
+      } else {
+        setFilterProjects(projects.filter((project) => project.categories.includes(category)))
+      }
+    }, 500);
+  };
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
@@ -46,7 +59,7 @@ const Projects = () => {
   return (
     <Container id="projects">
       <Contain>
-        <Header>My Creative Portfolio</Header>
+        <Header>My <Span>Creative</Span> Portfolio</Header>
         <ProjectsFilter>
           {["Front-End", "Full Stack", "Blockchain", "All"].map((category, index) => (
             <Categories

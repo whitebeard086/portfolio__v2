@@ -22,6 +22,10 @@ export const Contain = styled.div`
     padding: 0;
     margin: 0 5rem;
   }
+`;
+
+export const Span = styled.span`
+  color: rgb(45, 46, 73);
 `
 
 export const Header = styled.h2`
@@ -30,6 +34,10 @@ export const Header = styled.h2`
 
   @media ${props => props.theme.breakpoints.xmd} {
     font-size: 2.3rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.8rem;
   }
 `;
 
@@ -45,6 +53,12 @@ export const ProjectsFilter = styled.div`
 
   @media ${props => props.theme.breakpoints.xmd} {
     font-size: 1rem;
+    font-weight: 500;
+    gap: 1rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: .7rem;
   }
 `;
 
@@ -60,7 +74,7 @@ export const Categories = styled.div`
   }
 
   @media ${props => props.theme.breakpoints.sm} {
-    padding: 0.4rem .4rem;
+    padding: 0.4rem 0.4rem;
   }
 `;
 
@@ -90,6 +104,10 @@ export const ProjectItem = styled.div`
   @media ${props => props.theme.breakpoints.xmd} {
     width: 350px;
   }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    width: 250px;
+  }
 `;
 
 export const ProjectImage = styled.div`
@@ -111,6 +129,10 @@ export const ProjectContent = styled.div`
   @media ${props => props.theme.breakpoints.lg} {
     height: auto;
   }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 0 1.5rem;
+  }
 `;
 
 export const ProjectTitle = styled.h4`
@@ -124,6 +146,10 @@ export const ProjectTitle = styled.h4`
   @media ${props => props.theme.breakpoints.xmd} {
     font-size: 1.5rem;
   }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.2rem;
+  }
 `;
 
 export const ProjectDescription = styled.p`
@@ -133,6 +159,11 @@ export const ProjectDescription = styled.p`
   @media ${props => props.theme.breakpoints.xmd} {
     font-size: 1.15rem;
   }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
 `;
 
 export const ProjectTags = styled.div`
@@ -141,6 +172,10 @@ export const ProjectTags = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1rem 0;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    gap: .5rem;
+  }
 `;
 
 export const Tag = styled.p`
@@ -153,6 +188,10 @@ export const Tag = styled.p`
   border-radius: 6px;
   -webkit-box-shadow: 1px 1px 5px 0px #2d2e49;
   box-shadow: 1px 1px 5px 0px #2d2e49;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 0.3rem;
+  }
 `;
 
 export const ProjectIcons = styled(motion.div)`
