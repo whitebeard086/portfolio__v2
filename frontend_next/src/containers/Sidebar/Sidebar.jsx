@@ -1,6 +1,15 @@
 import { useRouter } from "next/router";
 import { socialIcons, mobileLinks } from "../../constants/headerData";
-import { CloseIcon, Container, Icon, NavLink, NavLinks, SocialIcon, SocialIcons } from "./SidebarStyles";
+import {
+  CloseIcon,
+  Container,
+  Cv,
+  Icon,
+  NavLink,
+  NavLinks,
+  SocialIcon,
+  SocialIcons,
+} from "./SidebarStyles";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const router = useRouter();
@@ -16,6 +25,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           </NavLink>
         ))}
       </NavLinks>
+      <Cv href="docs/Resume.pdf" download>Résumé</Cv>
       <SocialIcons>
         {socialIcons.map(({ icon, link, id }) => (
           <SocialIcon key={id} href={link}>

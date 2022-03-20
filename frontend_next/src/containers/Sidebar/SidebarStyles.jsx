@@ -67,6 +67,31 @@ export const NavLink = styled.a`
   }
 `;
 
+export const Cv = styled.a`
+  padding: 0.5rem 1rem;
+  width: 100px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid rgb(225, 173, 105);
+  color: rgba(222, 223, 238);
+  transition: all 0.4s ease;
+
+  @media ${props => props.theme.breakpoints.xmd} {
+    
+  }
+
+  &:hover {
+    transform: scale(0.96);
+    background: rgba(93, 97, 124, 0.2);
+  }
+  &:active {
+    transform: scale(1.1);
+  }
+`
+
 export const Icon = styled.span`
   margin-right: 1rem;
 `;

@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import logo from "../../assets/images/logo.svg";
-import { Links, socialIcons } from "../../constants/headerData";
+import { Links } from "../../constants/headerData";
+import { client, urlFor } from "../../client";
 import {
   Container,
   Logo,
@@ -16,6 +16,7 @@ import {
 
 const Header = ({ className, toggleSidebar }) => {
   const [navbar, setNavbar] = useState(false);
+  const [items, setItems] = useState(null);
 
   const router = useRouter();
 
@@ -35,13 +36,23 @@ const Header = ({ className, toggleSidebar }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const query = '*[_type == "navbar"]';
+
+    client.fetch(query).then(data => {
+      setItems(data[0]);
+    });
+  }, []);
+
   return (
     <Container className={navbar ? `${className} active` : `${className}`}>
-      <Logo href="/" passHref>
-        <NavLink>
-          <LogoImage src={logo} alt="logo" />
-        </NavLink>
-      </Logo>
+      {items && (
+        <Logo href="/" passHref>
+          <NavLink>
+            <LogoImage src={urlFor(items.logo)} height={150} width={150} alt="logo" />
+          </NavLink>
+        </Logo>
+      )}
       <NavContainer>
         <NavLinks>
           {Links.map(({ title, href, id }) => (
@@ -50,9 +61,9 @@ const Header = ({ className, toggleSidebar }) => {
             </NavLink>
           ))}
         </NavLinks>
-        <Cv href="../../assets/docs/resume.pdf" download>
-          Résumé
-        </Cv>
+          <Cv href="/docs/Resume.pdf" download>
+            Résumé
+          </Cv>
       </NavContainer>
       <MobileMenu onClick={toggleSidebar} />
     </Container>

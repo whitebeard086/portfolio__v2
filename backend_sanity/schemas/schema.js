@@ -11,7 +11,7 @@ import about from "./about";
 import experiences from "./experiences";
 import footer from "./footer";
 import imageAssets from "./imageAssets";
-import assets from "./assets";
+import navbar from "./navbar";
 import skills from "./skills";
 import workExperience from "./workExperience";
 import contact from "./contact";
@@ -33,7 +33,7 @@ export default createSchema({
     experiences,
     footer,
     imageAssets,
-    assets,
+    navbar,
     contact,
     /* Your types here! */
   ]),

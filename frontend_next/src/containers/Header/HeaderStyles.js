@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import Link from "next/link";
-import Image from "next/image";
 import { CgMenuRight } from "react-icons/cg";
 
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
   width: 100%;
   padding: 2rem 5rem;
   background: rgba(45, 46, 73, 0.1);
@@ -32,7 +31,7 @@ export const Container = styled.header`
 
 export const Logo = styled(Link)``;
 
-export const LogoImage = styled(Image)``;
+export const LogoImage = styled.img``;
 
 export const NavLinks = styled.div`
   display: flex;
