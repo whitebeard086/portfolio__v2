@@ -9,13 +9,13 @@ export default {
       type: "string",
     },
     {
-      name: "description",
-      title: "Description",
+      name: "body",
+      title: "Body",
       type: "string",
     },
     {
-      name: "imgUrl",
-      title: "ImgUrl",
+      name: "image",
+      title: "Image",
       type: "image",
       options: {
         hotspot: true,

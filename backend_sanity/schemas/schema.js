@@ -10,7 +10,7 @@ import categories from "./categories";
 import about from "./about";
 import experiences from "./experiences";
 import footer from "./footer";
-import imageAssets from "./imageAssets";
+import hero from "./hero";
 import navbar from "./navbar";
 import skills from "./skills";
 import workExperience from "./workExperience";
@@ -32,7 +32,7 @@ export default createSchema({
     workExperience,
     experiences,
     footer,
-    imageAssets,
+    hero,
     navbar,
     contact,
     /* Your types here! */

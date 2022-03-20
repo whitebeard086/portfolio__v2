@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Container = styled.section`
-  min-height: 101vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   width: 100%;

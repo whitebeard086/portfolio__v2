@@ -28,7 +28,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <Cv href="docs/Resume.pdf" download>Résumé</Cv>
       <SocialIcons>
         {socialIcons.map(({ icon, link, id }) => (
-          <SocialIcon key={id} href={link}>
+          <SocialIcon key={id} href={link} target="_blank" rel="noopener noreferrer">
             {icon}
           </SocialIcon>
         ))}

@@ -18,7 +18,7 @@ const About = () => {
   const [about, setAbout] = useState(null);
 
   useEffect(() => {
-    const query = '*[_type == "imageAssets"]';
+    const query = '*[_type == "about"]';
 
     client.fetch(query).then(data => {
       setAbout(data[0]);
@@ -30,15 +30,15 @@ const About = () => {
       <Contain>
         <AboutContent>
           <AboutImage>{about && <img src={urlFor(about?.image)} alt={about?.title} />}</AboutImage>
-          <AboutText>
-            <Title>I'm available, I'm motivated</Title>
+          {about && (
+            <AboutText>
+            <Title>{about.title}</Title>
             <Body>
-              Alongside building on my knowledge base, I love working on new challenges and ideas,
-              working with new tools and technologies. These are the times I have the most fun as
-              they often lead to several lightbulb moments.
+              {about.body}
             </Body>
             <Button href="mailto:ejimalex@gmail.com">Send Me a Mail</Button>
           </AboutText>
+          )}
         </AboutContent>
       </Contain>
     </AboutContainer>
