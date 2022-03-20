@@ -28,8 +28,6 @@ export const SocialIcon = styled.a`
   border-radius: 10%;
   color: rgba(255, 255, 255, 0.6);
   background: rgba(45, 46, 73, 0.5);
-  -webkit-box-shadow: 1px 1px 5px 1px #2d2e49; 
-  box-shadow: 1px 1px 5px 1px #2d2e49;
   transition: all 0.4s ease;
 
   &:hover {

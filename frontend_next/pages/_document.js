@@ -30,8 +30,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-GB">
         <Head>
-          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#2d2e49" />
-          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2d2e49" />
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#A0A1BF" />
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#5D617C" />
           <link
             href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"

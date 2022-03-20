@@ -9,6 +9,7 @@ import brands from "./brands";
 import categories from "./categories";
 import about from "./about";
 import experiences from "./experiences";
+import footer from "./footer";
 import imageAssets from "./imageAssets";
 import assets from "./assets";
 import skills from "./skills";
@@ -30,6 +31,7 @@ export default createSchema({
     skills,
     workExperience,
     experiences,
+    footer,
     imageAssets,
     assets,
     contact,

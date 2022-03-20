@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 import { urlFor, client } from "../../client";
 import { AppWrap, MotionWrap } from "../../wrapper";
@@ -8,7 +7,6 @@ import {
   Container,
   Contain,
   Header,
-  ImageHover,
   LiveIcon,
   ProjectContent,
   ProjectDescription,
@@ -24,6 +22,7 @@ import {
   SourceIcon,
   Tag,
   Span,
+  Tooltip,
 } from "./ProjectStyles";
 
 const Projects = () => {
@@ -86,14 +85,23 @@ const Projects = () => {
                 </ProjectTags>
                 <ProjectIcons>
                   <ProjectLink href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                    <ProjectIcon>
+                    <ProjectIcon
+                      data-tip="view source code"
+                    >
                       <SourceIcon />
                     </ProjectIcon>
                   </ProjectLink>
                   <ProjectLink href={project.projectLink} target="_blank" rel="noopener noreferrer">
-                    <ProjectIcon>
+                    <ProjectIcon
+                      data-tip="visit live site"
+                    >
                       <LiveIcon />
                     </ProjectIcon>
+                    <Tooltip 
+                      className="tooltip"
+                      effect="solid"
+                      arrowColor="#fff"
+                    />
                   </ProjectLink>
                 </ProjectIcons>
               </ProjectContent>

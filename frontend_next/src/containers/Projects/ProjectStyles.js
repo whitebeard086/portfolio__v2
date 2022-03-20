@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { RiGithubLine } from "react-icons/ri";
+import ReactTooltip from "react-tooltip";
 import styled from "styled-components";
 
 export const Container = styled.section`
@@ -220,7 +221,12 @@ export const ProjectIcon = styled(motion.div)`
     transform: scale(1.05);
     color: rgba(255, 255, 255, 0.8);
   }
+
+  &.tooltip {
+    background-color: #fff !important;
+  }
 `;
+
 export const LiveIcon = styled(MdOutlineOpenInNew)`
   font-size: 1.6rem;
 `;
@@ -228,3 +234,8 @@ export const LiveIcon = styled(MdOutlineOpenInNew)`
 export const SourceIcon = styled(RiGithubLine)`
   font-size: 1.6rem;
 `;
+
+export const Tooltip = styled(ReactTooltip)`
+  background: rgba(46, 45, 73, 0.5) !important;
+  transition: all 0.4s ease !important;
+`

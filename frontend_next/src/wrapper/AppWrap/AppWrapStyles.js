@@ -29,8 +29,8 @@ export const Copyright = styled.div`
     }
   }
 
-  @media ${props => props.theme.breakpoints.xmd} {
-      display: none;
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 0 1rem;
   }
 `;
 

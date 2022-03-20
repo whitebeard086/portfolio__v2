@@ -1,4 +1,4 @@
-import { About, Hero, Projects } from "../src/containers";
+import { About, Footer, Hero, Projects, Skills } from "../src/containers";
 import { Layout } from "../src/layout/Layout";
 
 export default function Home() {
@@ -8,6 +8,8 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
+        <Skills />
+        <Footer />
       </Layout>
     </>
   );
